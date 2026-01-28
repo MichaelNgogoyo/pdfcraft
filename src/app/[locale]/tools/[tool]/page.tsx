@@ -1,4 +1,4 @@
-import '../../../polyfills/promise-with-resolvers';
+import '../../../../polyfills/promise-with-resolvers';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { getToolById, getAllTools } from '@/config/tools';
