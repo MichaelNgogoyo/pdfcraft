@@ -1,3 +1,4 @@
+import '../polyfills/promise-with-resolvers';
 import type { Metadata } from 'next';
 import '@/app/globals.css';
 

@@ -1,3 +1,4 @@
+import '../../polyfills/promise-with-resolvers';
 import type { Metadata, Viewport } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';

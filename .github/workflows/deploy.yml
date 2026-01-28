@@ -30,6 +30,9 @@ jobs:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
+        port: ${{ secrets.VPS_PORT }}
+        passphrase: ${{ secrets.VPS_SSH_PASSPHRASE }}
+        fingerprint: ${{ secrets.VPS_HOST_FINGERPRINT }}
         script: |
           cd ${{ secrets.APP_PATH }}
           git pull origin main
