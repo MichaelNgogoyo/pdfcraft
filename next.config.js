@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable static export for deployment flexibility
-  output: 'export',
+  // output: 'export',
 
   // Webpack configuration for WASM modules
   webpack: (config, { isServer, webpack }) => {
