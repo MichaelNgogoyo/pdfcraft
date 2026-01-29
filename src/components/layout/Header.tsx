@@ -315,7 +315,7 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
             />
 
             {/* GitHub Repository Link */}
-            <a
+           {/* } <a
               href="https://github.com/PDFCraftTool/pdfcraft"
               target="_blank"
               rel="noopener noreferrer"
@@ -323,7 +323,8 @@ export const Header: React.FC<HeaderProps> = ({ locale, showSearch = true }) => 
               aria-label="GitHub Repository"
             >
               <Github className="h-5 w-5" aria-hidden="true" />
-            </a>
+            </a> 
+            */}
 
             {/* Language Selector placeholder */}
             <div id="language-selector-slot" />
