@@ -1,7 +1,7 @@
 import '../../../../polyfills/promise-with-resolvers';
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { getToolById, getAllTools } from '@/config/tools';
+import { getToolById } from '@/config/tools';
 import { getToolContent, type Locale } from '@/config/tool-content';
 import { ToolPage } from '@/components/tools/ToolPage';
 import { MergePDFTool } from '@/components/tools/merge';
@@ -87,27 +87,15 @@ import {
 } from '@/lib/seo/structured-data';
 import type { Metadata } from 'next';
 
-const SUPPORTED_LOCALES: Locale[] = ['en', 'ja', 'ko', 'es', 'fr', 'de', 'zh', 'pt'];
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+export const runtime = 'nodejs';
 
 interface ToolPageParams {
   params: Promise<{
     locale: string;
     tool: string;
   }>;
-}
-
-/**
- * Generate static params for all tool pages
- */
-export async function generateStaticParams() {
-  const tools = getAllTools();
-
-  return SUPPORTED_LOCALES.flatMap(locale =>
-    tools.map(tool => ({
-      locale,
-      tool: tool.slug,
-    }))
-  );
 }
 
 /**
